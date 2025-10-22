@@ -11,11 +11,7 @@ spec:
     path: ui_approach/nginx      # path of Nginx app in `argocd-demos` repo
   destination:
     server:  https://kubernetes.default.svc # Replace with your Cluster Url, To get run: `argocd cluster list`
-<<<<<<< HEAD
-    namespace: default          # Deploys into default namespace
-=======
-    namespace: default           # Deploys into devops namespace
->>>>>>> 4ee812b (I rewrite a root-app.yml file)
+    namespace: devops         # Deploys into devops namespace
   syncPolicy:
     automated:
       prune: true
