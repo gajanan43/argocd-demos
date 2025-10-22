@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/gajanan43/argocd-demos.git
     targetRevision: main
-    path: app_of_apps
+    path: app_of_apps/apps
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd 
