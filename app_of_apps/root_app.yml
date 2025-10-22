@@ -13,7 +13,7 @@ spec:
     path: app_of_apps/apps
   destination:
     server: https://kubernetes.default.svc
-    namespace: devops
+    namespace: devops  # devops namespace required in minikube cluster
 
   syncPolicy:
     automated:
