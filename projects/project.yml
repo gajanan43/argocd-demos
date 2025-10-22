@@ -1,0 +1,26 @@
+kind: AppProject
+apiVersion: argoproj.io/v1alpha1
+
+metadata:
+  name: frontend-team
+  namespace: argocd
+
+spec:
+  sourceRepos:
+  - https://github.com/gajanan43/argocd-demos.git
+  description: Frontend Application Project
+  destinations:
+  - namespace: frontend
+    server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*' 
+  namespaceResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  roles:
+  - name: frontend-admin
+    description: Admin role for Frontend Team
+    policies:
+    - p, proj:frontend-team:frontend-admin, applications, *, frontend-team/*, allow
+  
